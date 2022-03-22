@@ -1,0 +1,24 @@
+/* 레이아웃 */
+#header {}
+#footer {text-align: center;}
+
+/* 컨테이너 */
+/*.container {width: 100%; margin: 0 auto; background: rgba(0,0,0,0.3)}*/
+
+/* 헤더 */
+#header {margin: 4em auto;}
+.header_object {text-align: center}
+.header_object h1 {margin: 50px;}
+
+/* 메인 */
+#main {margin: 4em auto;}
+.main {text-align: center; width: 100%;}
+.word1{text-align: center; width: 100%;}
+.form-group{text-align: center; width: 100%;}
+.btn_submit{text-align: center; width: 100%;}
+
+.button{text-align: center; width: 100%; display: block;}
+
+/* 푸터 */
+.footer {text-align: center; width: 100%;}
+#footer .container {width: 100%; margin: 0 auto; background: rgba(0,0,0,0.3)}
