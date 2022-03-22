@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -18,8 +19,8 @@ public class HomeController {
     }
 
     @PostMapping("/check")
-    public String check(Model model) {
-        model.addAttribute("name", "김민재");
+    public String check(@RequestParam("name") String name, Model model) {
+        model.addAttribute("name", name);
         return "check";
     }
 }

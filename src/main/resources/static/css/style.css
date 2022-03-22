@@ -11,13 +11,30 @@
 .header_object h1 {margin: 50px;}
 
 /* 메인 */
-#main {margin: 4em auto;}
-.main {text-align: center; width: 100%;}
-.word1{text-align: center; width: 100%;}
+#main {margin: 4em auto; background: #333D79;}
+.main {width: 25rem; background: rgba(230, 235, 239, 0.4); font-size: 1.3rem; word-spacing: 0.2rem;
+    border-radius: 40px; margin-right: auto; margin-left: auto; margin-bottom: 4rem;
+    padding: 3rem; color: white; display: block;}
+.word1{text-align: center; width: 100%; font-size: 1.5rem; color: #FAEBEF;}
 .form-group{text-align: center; width: 100%;}
 .btn_submit{text-align: center; width: 100%;}
+.hello_word{text-align: center; width: 100%;}
 
-.button{text-align: center; width: 100%; display: block;}
+.button{text-align: center; width: 18rem; height: 4rem; border: 1px solid #FAEBEF;
+    display: block; margin-right: auto; margin-left: auto; overflow: hidden;}
+.button a{font-size: 1.5rem; color:#ffffff; text-decoration: none; line-height:60px; z-index:2;
+    position:relative; transition:all .5s ease; display: block;
+}
+.effect{
+    width: 18.2rem; height: 4rem; background:#FAEBEF; position:absolute;
+    z-index: 1; transition:all .5s ease; display: none;
+}
+.button:hover .effect{
+    display: block;
+}
+.button:hover a{
+    color:#333D79;
+}
 
 /* 푸터 */
 .footer {text-align: center; width: 100%;}
