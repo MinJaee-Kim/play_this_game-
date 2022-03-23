@@ -5,20 +5,64 @@
 /* 컨테이너 */
 /*.container {width: 100%; margin: 0 auto; background: rgba(0,0,0,0.3)}*/
 
+/*미디어*/
+@media (max-width: 576px) {
+    
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 960px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
 /* 헤더 */
 #header {margin: 4em auto;}
 .header_object {text-align: center}
 .header_object h1 {margin: 50px;}
 
 /* 메인 */
-#main {margin: 4em auto; background: #333D79;}
+#main {background: #333D79;}
 .main {width: 25rem; background: rgba(230, 235, 239, 0.4); font-size: 1.3rem; word-spacing: 0.2rem;
-    border-radius: 40px; margin-right: auto; margin-left: auto; margin-bottom: 4rem;
+    border-radius: 40px; margin-right: auto; margin-left: auto;
     padding: 3rem; color: white; display: block;}
 .word1{text-align: center; width: 100%; font-size: 1.5rem; color: #FAEBEF;}
-.form-group{text-align: center; width: 100%;}
-.btn_submit{text-align: center; width: 100%;}
+.form-group{text-align: center; width: 100%; margin: 30px;}
 .hello_word{text-align: center; width: 100%;}
+
+.form-group label{font-size: 1.5rem; color: white;}
+.form-group input[type="text"]{border: 1px solid #999; width: 18rem; height: 4rem;
+    border-radius: 40px; padding-left: 2rem; outline-style: none; -webkit-appearance: none;
+}
+.form-group input::placeholder{
+    font-size: 1.2rem;
+}
+/*버 튼*/
+.form-group .btn_submit{
+    background: none;   border: 3px solid #fff; border-radius: 5px; color: #fff;
+    font-size: 1.6em;   font-weight: bold;  margin: 1em auto; cursor: pointer;
+    padding: 0.5em 1em; position: relative; text-transform: uppercase;
+    transition: all 0.4s; overflow: hidden; z-index: 1;
+}
+.form-group .btn_submit::before{
+    content: ""; position: absolute; height: 100%; width: 100%;
+    background: white; top: 100%; left: 0; transition: all 0.4s; z-index: -1;
+}
+
+.form-group .btn_submit:hover::before {
+    transform: translateY(-100%);
+}
+
+.form-group .btn_submit:hover{
+    color: #333D79;
+}
+
 
 .button{text-align: center; width: 18rem; height: 4rem; border: 1px solid #FAEBEF;
     display: block; margin-right: auto; margin-left: auto; overflow: hidden;}
