@@ -1,13 +1,19 @@
 package Kuportfolio.playthisgame.controller;
 
+import Kuportfolio.playthisgame.gamedeRepository;
+import Kuportfolio.playthisgame.gamedeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
+
+    @Autowired
+    gamedeService service;
+
     @GetMapping("/")
     public String home() {
         return "home";
@@ -23,4 +29,13 @@ public class HomeController {
         model.addAttribute("name", name);
         return "check";
     }
-}
+
+    @GetMapping("/gamelist")
+    public ModelAndView list(ModelAndView mv){
+        mv.setViewName("list");
+        mv.addObject("gamelist",service.getAllgame());
+
+        return mv;
+    }
+ }
+
