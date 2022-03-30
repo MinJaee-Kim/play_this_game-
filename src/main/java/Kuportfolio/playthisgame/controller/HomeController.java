@@ -1,7 +1,6 @@
 package Kuportfolio.playthisgame.controller;
 
-import Kuportfolio.playthisgame.gamedeRepository;
-import Kuportfolio.playthisgame.gamedeService;
+import Kuportfolio.playthisgame.Service.gamedeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,7 +29,7 @@ public class HomeController {
         return "check";
     }
 
-    @GetMapping("/gamelist")
+    @RequestMapping("/gamelist")
     public ModelAndView list(ModelAndView mv){
         mv.setViewName("list");
         mv.addObject("gamelist",service.getAllgame());
