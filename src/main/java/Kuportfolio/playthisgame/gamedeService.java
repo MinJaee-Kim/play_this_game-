@@ -14,7 +14,4 @@ public class gamedeService {
     public List<gamede> getAllgame(){
         return repository.findAll();
     }
-
-    public List<gamede> getFindName(){ return repository.findOne(); }
-
     }
