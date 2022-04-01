@@ -15,6 +15,7 @@ public class Game {
     private int tech;
     private int casual;
     private int collabo;
+    private String uri;
 
 
     public Long getId() {
@@ -79,5 +80,13 @@ public class Game {
 
     public void setCollabo(int collabo) {
         this.collabo = collabo;
+    }
+
+    public String getUri() {
+        return uri;
+    }
+
+    public void setUri(String uri) {
+        this.uri = uri;
     }
 }
