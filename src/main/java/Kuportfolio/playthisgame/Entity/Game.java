@@ -1,12 +1,10 @@
 package Kuportfolio.playthisgame.Entity;
 
-import lombok.Data;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "gamede")
-public class game{
+public class Game {
 
     @Id
     private Long id;

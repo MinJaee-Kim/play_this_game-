@@ -1,6 +1,5 @@
 package Kuportfolio.playthisgame.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +7,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class GameDTO {
     private int story;
     private int challenge;
@@ -16,6 +14,15 @@ public class GameDTO {
     private int tech;
     private int casual;
     private int collabo;
+
+    public GameDTO(int story, int challenge, int collect, int tech, int casual, int collabo) {
+        this.story = story;
+        this.challenge = challenge;
+        this.collect = collect;
+        this.tech = tech;
+        this.casual = casual;
+        this.collabo = collabo;
+    }
 
     public int getStory() {
         return story;

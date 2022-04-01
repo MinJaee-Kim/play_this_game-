@@ -1,6 +1,6 @@
 package Kuportfolio.playthisgame.controller;
 
-import Kuportfolio.playthisgame.Service.gamedeService;
+import Kuportfolio.playthisgame.Service.GamedeService;
 import Kuportfolio.playthisgame.dto.GameDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController {
 
     @Autowired
-    gamedeService service;
+    GamedeService service;
 
     @GetMapping("/")
     public String home() {
