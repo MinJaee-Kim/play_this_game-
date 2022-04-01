@@ -2,6 +2,7 @@ package Kuportfolio.playthisgame.Service;
 
 import Kuportfolio.playthisgame.Entity.game;
 import Kuportfolio.playthisgame.Repository.gamedeRepository;
+import Kuportfolio.playthisgame.dto.GameDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ public class gamedeService {
         return repository.findAll();
     }
 
-    public List<game> getRecGame(){
-        return repository.getRecGame(1);
+    public List<game> getRecGame(GameDTO dto){
+        return repository.getRecGame(dto.getCasual());
     }
 }

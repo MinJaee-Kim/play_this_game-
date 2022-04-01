@@ -1,39 +1,21 @@
-package Kuportfolio.playthisgame.Entity;
+package Kuportfolio.playthisgame.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "gamede")
-public class game{
-
-    @Id
-    private Long id;
-    private String name;
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class GameDTO {
     private int story;
     private int challenge;
     private int collect;
     private int tech;
     private int casual;
     private int collabo;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getStory() {
         return story;
