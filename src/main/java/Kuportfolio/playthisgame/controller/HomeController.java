@@ -29,10 +29,18 @@ public class HomeController {
         return "check";
     }
 
+    @PostMapping("/result")
+    public ModelAndView result(ModelAndView mv) {
+        mv.setViewName("result");
+        mv.addObject("gamelist", service.getAllgame());
+
+        return mv;
+    }
+
     @RequestMapping("/gamelist")
     public ModelAndView list(ModelAndView mv){
         mv.setViewName("list");
-        mv.addObject("gamelist",service.getAllgame());
+        mv.addObject("gamelist", service.getRecGame());
 
         return mv;
     }

@@ -16,4 +16,8 @@ public class gamedeService {
     public List<game> getAllgame(){
         return repository.findAll();
     }
+
+    public List<game> getRecGame(){
+        return repository.getRecGame(1);
     }
+}
