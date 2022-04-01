@@ -37,9 +37,14 @@ public class HomeController {
         parameterMap.put("casual", 1);
 
         questionList.add(new Question(1, "asd", parameterMap));
+        questionList.add(new Question(2, "asdf", parameterMap));
 
         model.addAttribute("item", name);
+
         model.addAttribute("question", questionList);
+        System.out.println("asdff");
+
+
 
         return "check";
     }

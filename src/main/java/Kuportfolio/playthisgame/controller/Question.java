@@ -14,5 +14,29 @@ public class Question {
         this.parameter = parameter;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public String getQuestion() {
+        return Question;
+    }
+
+    public void setQuestion(String question) {
+        Question = question;
+    }
+
+    public HashMap<String, Integer> getParameter() {
+        return parameter;
+    }
+
+    public void setParameter(HashMap<String, Integer> parameter) {
+        this.parameter = parameter;
+    }
+
     private int value;
 }

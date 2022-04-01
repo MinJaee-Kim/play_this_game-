@@ -21,9 +21,9 @@
 
         <main id="main">
             <div th:object="${item}">
-                <div th:each="question : ${question}" class="form-check form-check-inline">
+                <div th:each="que : ${question}" class="form-check form-check-inline">
                     <input type="radio" th:field="${question}" th:value="${question}" class="form-check-input">
-                    <label th:text="${question}" class="form-check-label">
+                    <label th:text="${que.getQuestion()}" class="form-check-label">
                         BOOK
                     </label>
                 </div>
