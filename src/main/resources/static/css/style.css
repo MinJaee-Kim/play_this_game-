@@ -43,6 +43,11 @@
 .form-group input::placeholder{
     font-size: 1.2rem;
 }
+.main-check-box{
+    display: inline;
+}
+
+
 /*버 튼*/
 .form-group .btn_submit{
     background: none;   border: 3px solid #fff; border-radius: 5px; color: #fff;
