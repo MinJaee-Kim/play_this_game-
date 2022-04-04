@@ -20,12 +20,15 @@
         <!-- header -->
 
         <main id="main">
-            <form action="/check" method="post">
-                <div class="form-group">
-                    <label for="name">이름</label>
-                    <input type="text" id="name" name="name" placeholder="이름을 입력해주세요"> <button type="submit" class="btn_submit">등록</button>
+            <div th:object="${item}">
+                <div th:each="que : ${question}" class="form-check form-check-inline">
+                    <input type="radio" th:field="${question}" th:value="${question}" class="form-check-input">
+                    <label th:text="${que.getQuestion()}" class="form-check-label">
+                        BOOK
+                    </label>
                 </div>
-            </form>
+            </div>
+
         </main>
 
 

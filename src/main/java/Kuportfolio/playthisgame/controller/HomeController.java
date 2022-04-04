@@ -9,6 +9,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @Controller
 public class HomeController {
 
@@ -27,7 +32,21 @@ public class HomeController {
 
     @PostMapping("/check")
     public String check(@RequestParam("name") String name, Model model) {
-        model.addAttribute("name", name);
+        List<Question> questionList = new ArrayList<>();
+        HashMap<String, Integer> parameterMap = new HashMap<>();
+
+        parameterMap.put("casual", 1);
+
+        questionList.add(new Question(1, "asd", parameterMap));
+        questionList.add(new Question(2, "asdf", parameterMap));
+
+        model.addAttribute("item", name);
+
+        model.addAttribute("question", questionList);
+        System.out.println("asdff");
+
+
+
         return "check";
     }
 
