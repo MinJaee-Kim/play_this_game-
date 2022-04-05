@@ -1,5 +1,6 @@
 package Kuportfolio.playthisgame.controller;
 
+import Kuportfolio.playthisgame.Entity.Game;
 import Kuportfolio.playthisgame.Service.GamedeService;
 import Kuportfolio.playthisgame.dto.GameDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,6 +63,10 @@ public class HomeController {
         mv.addObject("gamelist", service.getRecGame(new GameDTO(1, 1, 1, 1, 1, 1)));
 
         return mv;
+    }
+
+    @GetMapping("/test")
+    public String getTest(@ModelAttribute Game model)
     }
  }
 

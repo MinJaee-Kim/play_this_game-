@@ -1,5 +1,7 @@
 package Kuportfolio.playthisgame.Entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
