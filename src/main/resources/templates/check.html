@@ -20,13 +20,16 @@
         <!-- header -->
 
         <main id="main">
-            <div class="main-check" th:each="que : ${question}">
+            <form action="/result" method="post">
+            <div class="main-check" th:each="que : *{question}">
                 <div class="main-check-question" th:text="${que.getQuestion()}"></div>
-                <div th:each="ans : ${answer}" class="main-check-box">
-                    <input type="radio" th:value="${ans.getNumber()}" th:name="${que.getNumber()}" class="main-check-input">
+                <div th:each="ans : ${answer}" class="main-check-box"  th:object="${result}">
+                    <input type="radio" th:value="${ans.getNumber()}" th:field="*{value}" class="main-check-input">
                     <label th:text="${ans.getAnswer()}" class="main-check-label"></label>
                 </div>
             </div>
+                <button type="submit">입력</button>
+            </form>
         </main>
 
 
