@@ -83,3 +83,10 @@
 /* 푸터 */
 .footer {text-align: center; width: 100%;}
 #footer .container {width: 100%; margin: 0 auto; background: rgba(0,0,0,0.3)}
+
+#gamename{
+    font-size: 15pt;
+    font-family : TmonMonsori, "GodoB", "굴림";
+    font-weight: bold;
+    color : yellow;
+}

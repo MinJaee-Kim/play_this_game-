@@ -19,6 +19,7 @@ public class HomeController {
 
     @Autowired
     GamedeService service;
+    Game game;
 
     @GetMapping("/")
     public String home() {
@@ -46,11 +47,10 @@ public class HomeController {
         System.out.println("asdff");
 
 
-
         return "check";
     }
 
-    @PostMapping("/result")
+    @GetMapping("/result")
     public ModelAndView result(ModelAndView mv) {
         mv.setViewName("result");
         mv.addObject("gamelist", service.getAllgame());
@@ -59,15 +59,18 @@ public class HomeController {
     }
 
     @RequestMapping("/gamelist")
-    public ModelAndView list(ModelAndView mv){
+    public ModelAndView list(ModelAndView mv) {
         mv.setViewName("list");
-        mv.addObject("gamelist", service.getRecGame(new GameDTO(1, 1, 1, 1, 1, 1)));
+        mv.addObject("gamelist", service.getRecGame(new GameDTO(9, 1, 9, 1, 9, 1)));
 
         return mv;
     }
 
     @GetMapping("/test")
-    public String getTest(@ModelAttribute Game model)
+    public String getTest(@ModelAttribute Game game) {
+        game.getName();
+
+        return null;
     }
- }
+}
 
