@@ -3,12 +3,14 @@ package Kuportfolio.playthisgame.controller;
 import Kuportfolio.playthisgame.Entity.Game;
 import Kuportfolio.playthisgame.Service.GamedeService;
 import Kuportfolio.playthisgame.dto.GameDTO;
+import Kuportfolio.playthisgame.dto.ResultDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -28,7 +30,7 @@ public class HomeController {
     }
 
     @PostMapping("/check")
-    public String check(@RequestParam("name") String name, Model model) {
+    public String check(Model model) {
         List<Question> questionList;
         List<Answer> answerList;
         String[][] parameter;
@@ -39,7 +41,7 @@ public class HomeController {
         answerList = initThings.getAnswerList();
         parameter = initThings.getParameter();
 
-        model.addAttribute("item", name);
+
 
         model.addAttribute("question", questionList);
         model.addAttribute("answer", answerList);
@@ -50,9 +52,12 @@ public class HomeController {
     }
 
     @PostMapping("/result")
-    public ModelAndView result(ModelAndView mv) {
+    public ModelAndView result(ModelAndView mv, @RequestParam HashMap<String, String> hashMap, Model model) {
         mv.setViewName("result");
         mv.addObject("gamelist", service.getAllgame());
+
+        System.out.println(hashMap);
+        model.addAttribute("val", hashMap);
 
         return mv;
     }
@@ -63,10 +68,6 @@ public class HomeController {
         mv.addObject("gamelist", service.getRecGame(new GameDTO(1, 1, 1, 1, 1, 1)));
 
         return mv;
-    }
-
-    @GetMapping("/test")
-    public String getTest(@ModelAttribute Game model)
     }
  }
 
