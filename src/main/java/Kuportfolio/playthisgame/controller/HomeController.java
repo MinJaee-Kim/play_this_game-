@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -29,7 +30,7 @@ public class HomeController {
     }
 
     @PostMapping("/check")
-    public String check(Model model, @ModelAttribute("result") ResultDTO resultDTO) {
+    public String check(Model model) {
         List<Question> questionList;
         List<Answer> answerList;
         String[][] parameter;
@@ -39,8 +40,6 @@ public class HomeController {
         questionList = initThings.getQuestionList();
         answerList = initThings.getAnswerList();
         parameter = initThings.getParameter();
-        resultDTO.setAnswerList(initThings.getAnswerList());
-        resultDTO.setQuestionList(initThings.getQuestionList());
 
 
 
@@ -53,11 +52,12 @@ public class HomeController {
     }
 
     @PostMapping("/result")
-    public ModelAndView result(ModelAndView mv, @ModelAttribute("result") ResultDTO resultDTO, Model model) {
+    public ModelAndView result(ModelAndView mv, @RequestParam HashMap<String, String> hashMap, Model model) {
         mv.setViewName("result");
         mv.addObject("gamelist", service.getAllgame());
 
-        model.addAttribute("one", resultDTO);
+        System.out.println(hashMap);
+        model.addAttribute("val", hashMap);
 
         return mv;
     }
