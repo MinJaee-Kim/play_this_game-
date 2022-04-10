@@ -3,7 +3,7 @@
 
 html { width: 100%; height: 100%; }
 
-body { width: 100%; height: 100%; background-color: #c5beaf; }
+body { width: 100%; height: 100%; background: #50586C; }
 
 canvas { width: 100%; height: 100%; position: fixed; top: 0; z-index: -4; }
 
@@ -34,14 +34,15 @@ canvas { width: 100%; height: 100%; position: fixed; top: 0; z-index: -4; }
 /* 헤더 */
 #header {margin: 4em auto;}
 .header_object {text-align: center}
-.header_object h1 {margin: 50px;}
+.header_object h1 {margin: 50px; color: rgba( 0, 0, 0, 0.2 ); font-size: 50px; position: relative; -webkit-text-stroke: 0.1vw #DCE2F0; }
+.header_object span {}
 
 /* 메인 */
 #main {height: 100%}
 .main {width: 25rem; background: rgba(230, 235, 239, 0.4); font-size: 1.3rem; word-spacing: 0.2rem;
     border-radius: 40px; margin-right: auto; margin-left: auto;
     padding: 3rem; color: white; display: block;}
-.word1{text-align: center; width: 100%; font-size: 1.5rem; color: #FAEBEF;}
+.word1{text-align: center; width: 100%; font-size: 1.5rem; color: #DCE2F0;}
 .form-group{text-align: center; width: 100%; margin: 30px;}
 .hello_word{text-align: center; width: 100%;}
 
@@ -84,7 +85,7 @@ canvas { width: 100%; height: 100%; position: fixed; top: 0; z-index: -4; }
     position:relative; transition:all .5s ease; display: block;
 }
 .effect{
-    width: 18.2rem; height: 4rem; background:#FAEBEF; position:absolute;
+    width: 18.2rem; height: 4rem; background:#DCE2F0; position:absolute;
     z-index: 1; transition:all .5s ease; display: none;
 }
 .button:hover .effect{

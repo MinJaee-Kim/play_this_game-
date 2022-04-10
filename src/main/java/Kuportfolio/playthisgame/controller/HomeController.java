@@ -1,9 +1,7 @@
 package Kuportfolio.playthisgame.controller;
 
-import Kuportfolio.playthisgame.Entity.Game;
 import Kuportfolio.playthisgame.Service.GamedeService;
 import Kuportfolio.playthisgame.dto.GameDTO;
-import Kuportfolio.playthisgame.dto.ResultDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,7 +38,6 @@ public class HomeController {
         questionList = initThings.getQuestionList();
         answerList = initThings.getAnswerList();
         parameter = initThings.getParameter();
-
 
 
         model.addAttribute("question", questionList);

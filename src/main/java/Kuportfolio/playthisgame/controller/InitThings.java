@@ -15,9 +15,9 @@ public class InitThings {
         answerList.add(new Answer(7, "그렇다"));
         answerList.add(new Answer(10, "매우그렇다"));
 
-        questionList.add(new Question(1, "asd"));
-        questionList.add(new Question(2, "asdf"));
-        questionList.add(new Question(3, "asdff"));
+        questionList.add(new Question("casual", "asd"));
+        questionList.add(new Question("story", "asdf"));
+        questionList.add(new Question("casd", "asdff"));
 
         this.parameter = new String[][]{{"casual", "1"}, {"casual", "2"}};
     }
