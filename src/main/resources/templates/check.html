@@ -19,7 +19,7 @@
         </header>
         <!-- header -->
 
-        <main id="main">
+        <main id="main-chk">
             <form action="/result" method="post">
             <div class="main-check" th:each="que : *{question}">
                 <div class="main-check-question" th:text="${que.getQuestion()}"></div>
@@ -39,7 +39,7 @@
 
 
 
-        <footer id="footer">
+        <footer id="footer-chk">
             <div class="container">
                 <div class="footer">
                         ⓒ 2022.
