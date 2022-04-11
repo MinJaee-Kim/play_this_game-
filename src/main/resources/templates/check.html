@@ -23,9 +23,12 @@
             <form action="/result" method="post">
             <div class="main-check" th:each="que : *{question}">
                 <div class="main-check-question" th:text="${que.getQuestion()}"></div>
-                <div th:each="ans : ${answer}" class="main-check-box">
-                    <input type="radio" th:value="${ans.getNumber()}" th:name="${que.getParameter()}" class="main-check-input">
-                    <label th:text="${ans.getAnswer()}" class="main-check-label"></label>
+                <div class="main-check-box">
+                    <div th:each="ans : ${answer}" class="main-check-box-matter">
+                        <input type="radio" th:value="${ans.getNumber()}" th:name="${que.getParameter()}" class="main-check-input">
+                        <br>
+                        <label th:text="${ans.getAnswer()}" class="main-check-label"></label>
+                    </div>
                 </div>
             </div>
                 <button type="submit">입력</button>
