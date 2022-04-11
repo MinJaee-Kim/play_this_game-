@@ -14,13 +14,13 @@
         <header id="header">
             <div id="container">
                 <div class="header_object">
-                    <h1>이 겜 해봤음?</h1>
+                    <h1 class="title">이 <span class="title_object">겜</span>해봤음?</h1>
                 </div>
             </div>
         </header>
         <!-- header -->
 
-        <main id="main">
+        <main id="main-chk">
             <form action="/result" method="post">
             <div class="main-check" th:each="que : *{question}">
                 <div class="main-check-question" th:text="${que.getQuestion()}"></div>
@@ -40,7 +40,7 @@
 
 
 
-        <footer id="footer">
+        <footer id="footer-chk">
             <div class="container">
                 <div class="footer">
                         ⓒ 2022.
