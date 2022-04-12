@@ -23,6 +23,7 @@
         <main id="main-chk">
             <form action="/result" method="post">
             <div class="main-check" th:each="que : *{question}">
+                <div class="main-check-number">1</div>
                 <div class="main-check-question" th:text="${que.getQuestion()}"></div>
                 <div class="main-check-box">
                     <div th:each="ans : ${answer}" class="main-check-box-matter">
@@ -33,7 +34,9 @@
                     </div>
                 </div>
             </div>
-                <button type="submit">입력</button>
+                <div class="main-check">
+                <button type="submit" class="main-button">결과 보기</button>
+                </div>
             </form>
         </main>
 
