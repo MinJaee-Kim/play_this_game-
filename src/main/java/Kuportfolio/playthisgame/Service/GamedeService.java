@@ -19,6 +19,6 @@ public class GamedeService {
     }
 
     public List<Game> getRecGame(GameDTO dto){
-        return repository.findScore(dto.getCasual(),dto.getCollect(),dto.getTech(),dto.getCollabo(),dto.getChallenge(), dto.getStory());
+        return repository.getOne(dto.getCasual(),dto.getCollect(),dto.getTech(),dto.getCollabo(),dto.getChallenge(), dto.getStory());
     }
 }
