@@ -27,6 +27,7 @@
                 <div class="main-check-box">
                     <div th:each="ans : ${answer}" class="main-check-box-matter">
                         <input type="radio" th:value="${ans.getNumber()}" th:name="${que.getParameter()}" class="main-check-input">
+                        <span></span>
                         <br>
                         <label th:text="${ans.getAnswer()}" class="main-check-label"></label>
                     </div>
