@@ -51,10 +51,37 @@ public class HomeController {
     @PostMapping("/result")
     public ModelAndView result(ModelAndView mv, @RequestParam HashMap<String, String> hashMap, Model model) {
         mv.setViewName("result");
-        mv.addObject("gamelist", service.getAllgame());
-
-        System.out.println(hashMap);
         model.addAttribute("val", hashMap);
+
+        int story=0;
+        int challenge=0;
+        int collect=0;
+        int tech=0;
+        int casual=0;
+        int collabo=0;
+
+        for(String key:hashMap.keySet()){
+            if (key.substring(0, key.length()-1).equals("story")){
+                story+=Integer.parseInt(hashMap.get(key));
+            }
+            if (key.substring(0, key.length()-1).equals("challenge")){
+                challenge+=Integer.parseInt(hashMap.get(key));
+            }
+            if (key.substring(0, key.length()-1).equals("collect")){
+                collect+=Integer.parseInt(hashMap.get(key));
+            }
+            if (key.substring(0, key.length()-1).equals("tech")){
+                tech+=Integer.parseInt(hashMap.get(key));
+            }
+            if (key.substring(0, key.length()-1).equals("casual")){
+                casual+=Integer.parseInt(hashMap.get(key));
+            }
+            if (key.substring(0, key.length()-1).equals("collabo")){
+                collabo+=Integer.parseInt(hashMap.get(key));
+            }
+        }
+
+        mv.addObject("gamelist", service.getRecGame(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
 
         return mv;
     }
