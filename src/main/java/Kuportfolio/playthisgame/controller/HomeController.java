@@ -16,7 +16,6 @@ public class HomeController {
 
     @Autowired
     GamedeService service;
-    Game game;
 
     @GetMapping("/")
     public String home() {
