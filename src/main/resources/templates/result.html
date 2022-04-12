@@ -21,6 +21,19 @@
         <!-- header -->
 
         <main id="main">
+
+            <div th:each = "game : ${gamelist}">
+                <table border="1">
+                    <tr align="center">
+                        <td th:text="${game.id}  "></td>
+                        <td><img th:src="@{./img/}+${game.uri}+.jpg"></td>
+                        <td></td>
+                    </tr>
+                    <tr align="center">
+                        <td id="gamename" colspan="2" th:text="${game.name}"></td>
+                    </tr>
+                </table>
+
             <div class="hello_word">
                 <p th:text="'안녕하세요' + ${val.get('1')}">hello! empty</p>
             </div> <!-- /container -->
