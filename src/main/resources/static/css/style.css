@@ -109,10 +109,20 @@ canvas { width: 100%; height: 100%; position: fixed; top: 0; z-index: -4; }
 .form-group input::placeholder{
     font-size: 1.2rem;
 }
+
+.main-check {
+    width: 45rem; margin-left: auto; margin-right: auto;
+}
+.main-check-number{
+    position: relative; left: -3rem; top: 3rem; font-size: 2.5rem; color: #EE4E34; font-weight: bold;
+}
 .main-check-box{
     display: inline;
 }
-
+#main-chk .main-check-question {
+    text-align: center; font-size: 2rem; color: #EE4E34; background: rgba(255, 255, 255); padding: 2rem;
+    width: 40rem; margin-right: auto; margin-left: auto; border: 2px solid #EE4E34
+}
 #main-chk .main-check-question {
     text-align: center; font-size: 2rem; color: #EE4E34; background: rgba(255, 255, 255); padding: 2rem;
     width: 40rem; margin-right: auto; margin-left: auto; border: 2px solid #EE4E34
@@ -131,13 +141,28 @@ canvas { width: 100%; height: 100%; position: fixed; top: 0; z-index: -4; }
 #main-chk .main-check-box input {
     accent-color: #EE4E34; width: 23px; height: 23px; cursor: pointer;
 }
+/*버튼*/
+#main-chk .main-button {
+    background: none;   border: 3px solid #fff; border-radius: 5px; color: #fff;
+    font-size: 1.6em;   font-weight: bold;  margin: 1em auto; cursor: pointer;
+    padding: 0.5em 1em; position: relative; left: 70%; z-index: 1; overflow: hidden;
+}
+#main-chk .main-button::before{
+    content: ""; position: absolute; height: 100%; width: 101%;
+    background: white; top: 0; left: -101%; transition: all 0.4s; z-index: -1;
+}
+#main-chk .main-button:hover::before {
+    transform: translateX(100%);
+}
+#main-chk .main-button:hover{
+    color: #333D79;
+}
 
 /*버 튼*/
 .form-group .btn_submit{
     background: none;   border: 3px solid #fff; border-radius: 5px; color: #fff;
     font-size: 1.6em;   font-weight: bold;  margin: 1em auto; cursor: pointer;
-    padding: 0.5em 1em; position: relative; text-transform: uppercase;
-    transition: all 0.4s; overflow: hidden; z-index: 1;
+    padding: 0.5em 1em; position: relative; transition: all 0.4s; overflow: hidden; z-index: 1;
 }
 .form-group .btn_submit::before{
     content: ""; position: absolute; height: 100%; width: 100%;
