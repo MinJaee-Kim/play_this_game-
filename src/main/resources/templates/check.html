@@ -22,7 +22,7 @@
         <!-- header -->
 
         <main id="main-chk">
-            <form action="/result" method="post">
+            <form id="checkform" method="post" onsubmit="return checkSubmit()">
             <div class="main-check" th:each="que : *{question}">
                 <div class="main-check-number" th:text="${que.getNumber()}"></div>
                 <div class="main-check-question" th:text="${que.getQuestion()}"></div>
