@@ -31,13 +31,11 @@ public class HomeController {
     public String check(Model model) {
         List<Question> questionList;
         List<Answer> answerList;
-        String[][] parameter;
 
         InitThings initThings = new InitThings();
 
         questionList = initThings.getQuestionList();
         answerList = initThings.getAnswerList();
-        parameter = initThings.getParameter();
 
 
         model.addAttribute("question", questionList);

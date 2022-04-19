@@ -10,6 +10,7 @@
 </head>
 <body>
         <script type="module" th:src="@{/js/app.js}"></script>
+        <script type="text/javascript" th:src="@{/js/matter.js}"></script>
 
         <header id="header">
             <div id="container">
@@ -23,11 +24,11 @@
         <main id="main-chk">
             <form action="/result" method="post">
             <div class="main-check" th:each="que : *{question}">
-                <div class="main-check-number">1</div>
+                <div class="main-check-number" th:text="${que.getNumber()}"></div>
                 <div class="main-check-question" th:text="${que.getQuestion()}"></div>
                 <div class="main-check-box">
                     <div th:each="ans : ${answer}" class="main-check-box-matter">
-                        <input type="radio" th:value="${ans.getNumber()}" th:name="${que.getParameter()}" class="main-check-input">
+                        <input type="radio" th:value="${ans.getNumber()}" th:name="${que.getParameter()}" class="main-check-input" onclick="scrollT()">
                         <span></span>
                         <br>
                         <label th:text="${ans.getAnswer()}" class="main-check-label"></label>

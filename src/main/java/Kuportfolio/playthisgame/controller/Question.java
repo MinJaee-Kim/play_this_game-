@@ -1,12 +1,22 @@
 package Kuportfolio.playthisgame.controller;
 
 public class Question {
+    private int number;
     private String parameter;
     private String Question;
 
-    public Question(String parameter, String question) {
+    public Question(String parameter, int number, String question) {
         this.parameter = parameter;
+        this.number = number;
         Question = question;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public String getParameter() {
