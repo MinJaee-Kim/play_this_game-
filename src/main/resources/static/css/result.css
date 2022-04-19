@@ -1,0 +1,20 @@
+table{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 35px;
+    font-family: LeferiBaseType-BoldA;
+    color: #EE4E34;
+
+}
+.chuchun {
+    text-align: center;
+    font-size: 35px;
+    font-family: DOSGothic;
+}
+@font-face {
+    font-family: 'LeferiBaseType-BoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-BoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
