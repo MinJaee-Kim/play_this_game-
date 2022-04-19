@@ -74,7 +74,7 @@ canvas { width: 100%; height: 100%; position: fixed; top: 0; z-index: -4; }
     border-radius: 40px; margin-right: auto; margin-left: auto; display:flex;
     padding: 3rem; color: white; display: block; font-family: DOSGothic}
 .word1{font-family: DOSGothic; text-align: center; width: 100%; font-size: 1.5rem; color: #DCE2F0;}
-.form-group{text-align: center; width: 100%; margin: 30px; float: right;}
+.form-group{text-align: center; width: 100%; margin: 30px; float: right; font-family: DOSGothic;}
 .hello_word{text-align: center; width: 100%;}
 .main2 {
     border:2px solid deepskyblue; width: 8rem; background: rgb(255,255,255,0.6); font-size: 1.3rem; word-spacing: 0.2rem;
@@ -98,13 +98,13 @@ canvas { width: 100%; height: 100%; position: fixed; top: 0; z-index: -4; }
 .main2:last-child:hover{
     background: rgba(0,128,0,0.4); color: white; border: 2px solid #FCEDDA;
 }
-.word1{font-family: DOSGothic; text-align: center; width: 100%; font-size: 1.5rem; color: rgba(142,142,142);}
+.word1{font-family: DOSGothic; text-align: center; width: 100%; font-size: 1.5rem; color: rgba(256, 140, 118);}
 .form-group{text-align: center; width: 100%; margin: 30px; clear: both; bottom: 30px}
 .hello_word{text-align: center; width: 100%;}
 
-.form-group label{font-size: 1.5rem; color: white;}
-.form-group input[type="text"]{border: 1px solid #999; width: 18rem; height: 4rem;
-    border-radius: 40px; padding-left: 2rem; outline-style: none; -webkit-appearance: none;
+.form-group label{font-size: 1.5rem; color: rgba(238, 78, 52);}
+.form-group input[type="text"]{border: 2px solid #999; width: 18rem; height: 4rem;
+    border-radius: 25px; padding-left: 2rem; outline-style: none; -webkit-appearance: none;
 }
 .form-group input::placeholder{
     font-size: 1.2rem;
@@ -160,13 +160,14 @@ canvas { width: 100%; height: 100%; position: fixed; top: 0; z-index: -4; }
 
 /*버 튼*/
 .form-group .btn_submit{
-    background: none;   border: 3px solid #fff; border-radius: 5px; color: #fff;
+    background: none;   border: 3px solid rgba(238, 78, 52); border-radius: 5px; color: rgba(238, 78, 52);
+    font-family: DOSGothic;
     font-size: 1.6em;   font-weight: bold;  margin: 1em auto; cursor: pointer;
     padding: 0.5em 1em; position: relative; transition: all 0.4s; overflow: hidden; z-index: 1;
 }
 .form-group .btn_submit::before{
     content: ""; position: absolute; height: 100%; width: 100%;
-    background: white; top: 100%; left: 0; transition: all 0.4s; z-index: -1;
+    background: rgba(238, 78, 52, 0.4); top: 100%; left: 0; transition: all 0.4s; z-index: -1;
 }
 
 .form-group .btn_submit:hover::before {
@@ -174,18 +175,18 @@ canvas { width: 100%; height: 100%; position: fixed; top: 0; z-index: -4; }
 }
 
 .form-group .btn_submit:hover{
-    color: #333D79;
+    color:white ;
 }
 
 
-.button{text-align: center; width: 18rem; height: 4rem; border: 1px solid #FAEBEF;
-    display: block; margin-right: auto; margin-left: auto; overflow: hidden; font-family: DOSGothic;}
-.button a{font-size: 1.5rem; color:#ffffff; text-decoration: none; line-height:60px; z-index:2;
+.button{text-align: center; width: 18rem; height: 4rem; border:3px solid rgba(238, 118, 118);
+    display: block; margin-right: auto; margin-left: auto; overflow: hidden; font-family: DOSGothic; border-radius:25px;}
+.button a{font-size: 1.5rem; color:rgba(238, 118, 118 ); text-decoration: none; line-height:60px; z-index:2;
     position:relative; transition:all .5s ease; display: block;
 }
 .effect{
-    width: 18.2rem; height: 4rem; background:rgba(238, 78, 52, 0.4); position:absolute;
-    z-index: 1; transition:all .5s ease; display: none;
+    width: 18rem; height: 4rem; background:rgba(238, 78, 52, 0.4); position:absolute;
+    z-index: 1; transition:all .5s ease; display: none; border-radius:25px;
     font-family: DOSGothic
 }
 .button:hover .effect{
