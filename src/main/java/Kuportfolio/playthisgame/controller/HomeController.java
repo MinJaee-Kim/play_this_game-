@@ -79,7 +79,9 @@ public class HomeController {
         }
 
         mv.addObject("gamelist", service.getRecGame(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
+        mv.addObject("gamecount", service.getRecGame(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
 
+        System.out.println(service.getCount(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
         return mv;
     }
 

@@ -14,6 +14,10 @@ public class GamedeService {
     @Autowired
     GamedeRepository repository;
 
+    public int getCount(GameDTO dto){
+        return repository.countId(dto.getCasual(),dto.getCollect(),dto.getTech(),dto.getCollabo(),dto.getChallenge(), dto.getStory());
+    }
+
     public List<Game> getAllgame(){
         return repository.findAll();
     }
