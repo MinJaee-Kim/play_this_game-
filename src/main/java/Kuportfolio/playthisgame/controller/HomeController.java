@@ -1,5 +1,6 @@
 package Kuportfolio.playthisgame.controller;
 
+import Kuportfolio.playthisgame.Entity.Game;
 import Kuportfolio.playthisgame.Service.GamedeService;
 import Kuportfolio.playthisgame.dto.GameDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.lang.reflect.Member;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class HomeController {
@@ -78,17 +81,29 @@ public class HomeController {
             }
         }
 
-        mv.addObject("gamelist", service.getRecGame(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
-        mv.addObject("gamecount", service.getRecGame(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
+//        mv.addObject("gamecount", service.getRecGame(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
 
-        System.out.println(service.getCount(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
+//        if (service.getCount(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3))==0){
+//            System.out.println(service.getCount(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
+//            System.out.println(story/4);
+//            System.out.println(collabo/3);
+//            System.out.println(casual/3);
+//            System.out.println(challenge/4);
+//            System.out.println(collect/3);
+////            mv.addObject("gamelist", service.findFirst(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
+//        } else {
+//            mv.addObject("gamelist", service.getRecGame(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
+//        }
+        List<Game> games = service.findOnea(new GameDTO(5, 5, 5, 5, 9, 5));
+        mv.addObject("gamelist", games);
+
         return mv;
     }
 
     @RequestMapping("/gamelist")
     public ModelAndView list(ModelAndView mv) {
         mv.setViewName("list");
-        mv.addObject("gamelist", service.getRecGame(new GameDTO(7, 7, 0, 4, 7, 0)));
+//        mv.addObject("gamelist", service.getRecGame(new GameDTO(7, 7, 0, 4, 7, 0)));
 
         return mv;
     }
