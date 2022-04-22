@@ -18,6 +18,8 @@ public class Game {
     private int casual;
     private int collabo;
     private String uri;
+    private String VideoUrl;
+    private String explanation;
 
 
     public Long getId() {
@@ -91,4 +93,13 @@ public class Game {
     public void setUri(String uri) {
         this.uri = uri;
     }
+
+    public String getVideoUrl() {
+        return VideoUrl;
+    }
+
+    public void setVideoUrl(String videoUrl) {
+        VideoUrl = videoUrl;
+    }
+
 }

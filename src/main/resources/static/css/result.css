@@ -1,12 +1,38 @@
-table{
-    margin-right: auto;
-    margin-left: auto;
+.mainresult{
     text-align: center;
+    padding: 50px;
+    padding-top: 0px;
+    width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topname {
+    text-align: left;
     font-size: 35px;
-    font-family: LeferiBaseType-BoldA;
-    color: #EE4E34;
+    font-family: DOSGothic;
+}
+
+.videoImg{
+    text-align: left;
+    width: 45rem;
+}
+
+.gameimg{
+    float:left;
+    width:215px;
+    height:100px;
+}
+
+.gameimg2{
+    width: 14rem;
+}
+.videoSrc{
+    float: right;
+    width:30rem;
 
 }
+
 .chuchun {
     text-align: center;
     font-size: 35px;
