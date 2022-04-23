@@ -9,10 +9,10 @@ public class InitThings {
 
     public InitThings() {
         answerList.add(new Answer(0, "매우아니다"));
-        answerList.add(new Answer(2, "아니다"));
-        answerList.add(new Answer(5, "보통이다"));
-        answerList.add(new Answer(7, "그렇다"));
-        answerList.add(new Answer(10, "매우그렇다"));
+        answerList.add(new Answer(1, "아니다"));
+        answerList.add(new Answer(2, "보통이다"));
+        answerList.add(new Answer(3, "그렇다"));
+        answerList.add(new Answer(4, "매우그렇다"));
 
         questionList.add(new Question("casual1",1, "나는 게임을 짧게 즐기는 편이다."));
         questionList.add(new Question("story1",2, "나는 영화를 자주 보는 편이다"));

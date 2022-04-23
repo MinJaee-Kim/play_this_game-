@@ -8,19 +8,16 @@ import javax.persistence.*;
 @Table(name = "gamede")
 public class Game {
 
-    @Id
-    private Long id;
-    private String name;
-    private int story;
-    private int challenge;
-    private int collect;
-    private int tech;
-    private int casual;
-    private int collabo;
-    private String uri;
-    private String VideoUrl;
-    private String explanation;
-
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
+    public String name;
+    public int story;
+    public int challenge;
+    public int collect;
+    public int tech;
+    public int casual;
+    public int collabo;
+    public String uri;
 
     public Long getId() {
         return id;
