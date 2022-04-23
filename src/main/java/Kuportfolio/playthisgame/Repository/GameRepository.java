@@ -7,9 +7,7 @@ import java.util.List;
 public interface GameRepository {
     List<Game> findAll();
     List<Game> findOne(long id);
-    List<Game> findBetween(GameDTO dto);
-    List<Game> findBetweenWide(GameDTO dto);
-    List<Game> findBetweenWide2(GameDTO dto);
+    List CountAll();
     List CountBetween(GameDTO dto);
     List CountBetweenWide(GameDTO dto);
     List CountBetweenWide2(GameDTO dto);

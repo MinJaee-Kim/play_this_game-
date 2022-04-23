@@ -22,11 +22,9 @@ public class GamedeService {
         return repository.findOne(id);
     }
 
-    public List<Game> findBetween(GameDTO dto) {return repository.findBetween(dto);}
-
-    public List<Game> findBetweenWide(GameDTO dto) {return repository.findBetweenWide(dto);}
-
-    public List<Game> findBetweenWide2(GameDTO dto) {return repository.findBetweenWide2(dto);}
+    public List CountAll() {
+        return repository.CountAll();
+    }
 
     public List CountBetween(GameDTO dto) {return repository.CountBetween(dto);}
 
