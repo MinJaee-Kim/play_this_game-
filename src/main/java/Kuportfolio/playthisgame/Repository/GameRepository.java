@@ -6,5 +6,10 @@ import java.util.List;
 
 public interface GameRepository {
     List<Game> findAll();
-    List<Game> findTwo(GameDTO dto);
+    List<Game> findBetween(GameDTO dto);
+    List<Game> findBetweenWide(GameDTO dto);
+    List<Game> findBetweenWide2(GameDTO dto);
+    long CountBetween(GameDTO dto);
+    long CountBetweenWide(GameDTO dto);
+    long CountBetweenWide2(GameDTO dto);
 }

@@ -80,21 +80,40 @@ public class HomeController {
                 collabo+=Integer.parseInt(hashMap.get(key));
             }
         }
+        List<Game> games = null;
+        int idx = 0;
+        long count = service.CountBetween(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3));
 
-//        mv.addObject("gamecount", service.getRecGame(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
+        for (;;){
+            if (count!=0){
+                idx = (int)(Math.random()*count);
+                games = service.findBetween(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3));
+                break;
+            } else {
+                count = service.CountBetweenWide(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3));
+                System.out.println(count);
+            }
 
-//        if (service.getCount(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3))==0){
-//            System.out.println(service.getCount(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
-//            System.out.println(story/4);
-//            System.out.println(collabo/3);
-//            System.out.println(casual/3);
-//            System.out.println(challenge/4);
-//            System.out.println(collect/3);
-////            mv.addObject("gamelist", service.findFirst(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
-//        } else {
-//            mv.addObject("gamelist", service.getRecGame(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
-//        }
-        List<Game> games = service.findTwo(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3));
+            if (count!=0){
+                idx = (int)(Math.random()*count);
+                games = service.findBetweenWide(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3));
+                System.out.println(count);
+                break;
+            } else {
+                count = service.CountBetweenWide2(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3));
+                System.out.println(count);
+            }
+
+            if (count!=0){
+                idx = (int)(Math.random()*count);
+                games = service.findBetweenWide2(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3));
+                System.out.println(count);
+            }
+            break;
+        }
+        System.out.println(idx);
+
+
         mv.addObject("gamelist", games);
 
         return mv;
