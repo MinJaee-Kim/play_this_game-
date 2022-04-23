@@ -19,7 +19,6 @@ public class Game {
     public int collabo;
     public String uri;
 
-
     public Long getId() {
         return id;
     }
@@ -91,4 +90,21 @@ public class Game {
     public void setUri(String uri) {
         this.uri = uri;
     }
+
+    public String getVideoUrl() {
+        return VideoUrl;
+    }
+
+    public void setVideoUrl(String videoUrl) {
+        VideoUrl = videoUrl;
+    }
+
+    public String getExplanation() {
+        return explanation;
+    }
+
+    public void setExplanation(String explanation) {
+        this.explanation = explanation;
+    }
+
 }

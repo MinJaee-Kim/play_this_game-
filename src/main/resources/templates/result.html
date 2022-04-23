@@ -27,17 +27,31 @@
             </div>
 
             <div class="result" th:each = "game : ${gamelist}">
-                <table border="">
-                    <tr align="center">
-                        <td th:text="${game.id}"></td>
-                        <td><img th:src="@{./imgs/}+${game.uri}+.jpg"></td>
-                        <td></td>
-                    </tr>
-                    <tr align="center">
-                        <td id="gamename" colspan="2" th:text="${game.name}"></td>
-                    </tr>
-                </table>
-            </div>
+
+                <div class="mainresult">
+                    <div class="topname">
+                        <p class= "name" th:text="${game.name}"/>
+                    </div>
+                    <div class="videoImg">
+                        <div class="gameimg">
+                            <img class="gameimg2" th:src="@{./imgs/}+${game.uri}+.jpg"/>
+                            <div class="exten">
+                            <p class="exten2" th:text="${game.explanation}"/>
+                            </div>
+                        </div>
+                        <video control  class="videoSrc">
+                            <source th:src="${game.videoUrl}"
+                                    type="video/webm">
+                        </video>
+
+                        <div class="resultbuttonout">
+                          <div class="resultbutton">
+                            <div class="resulteffect"></div>
+                                <a class="a" href="/input">다시하기</a>
+                            </div>
+                        </div>
+
+                </div>
             </div>
         </main>
 
