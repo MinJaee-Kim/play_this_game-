@@ -102,4 +102,12 @@ public class Game {
         VideoUrl = videoUrl;
     }
 
+    public String getExplanation() {
+        return explanation;
+    }
+
+    public void setExplanation(String explanation) {
+        this.explanation = explanation;
+    }
+
 }

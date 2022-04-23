@@ -7,6 +7,12 @@
     margin-right: auto;
 }
 
+.exten{
+    clear: both;
+    margin-top: 20px;
+    font-family: DOSGothic;
+}
+
 .topname {
     text-align: left;
     font-size: 35px;
@@ -22,6 +28,7 @@
     float:left;
     width:215px;
     height:100px;
+    background: rgba(238, 118, 118,0.4);
 }
 
 .gameimg2{
@@ -32,6 +39,28 @@
     width:30rem;
 
 }
+.resultbuttonout{
+    padding: 20px;
+    clear: both;
+}
+.resultbutton{
+    text-align: center; width: 18rem; height: 4rem; border:1px solid rgba(238, 118, 118);
+    display: block; margin-right: auto; margin-left: auto;
+    overflow: hidden; font-family: DOSGothic; border-radius:25px;}
+
+.resultbutton a{font-size: 1.5rem; color:rgba(238, 118, 118 ); text-decoration: none; line-height:60px; z-index:2;
+    position:relative; transition:all .5s ease; display: block;
+}
+.resulteffect{
+    width: 18rem; height: 4rem; background:rgba(238, 78, 52, 0.4); position:absolute;
+    z-index: 1; transition:all .5s ease; display: none; border-radius:25px;
+    font-family: DOSGothic
+}
+.resultbutton:hover .resulteffect{
+    display: block;
+}
+.resultbutton:hover a{
+    color:#FCEDDA;}
 
 .chuchun {
     text-align: center;
