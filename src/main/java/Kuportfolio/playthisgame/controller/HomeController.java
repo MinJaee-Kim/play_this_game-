@@ -94,7 +94,7 @@ public class HomeController {
 //        } else {
 //            mv.addObject("gamelist", service.getRecGame(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3)));
 //        }
-        List<Game> games = service.findOnea(new GameDTO(5, 5, 5, 5, 9, 5));
+        List<Game> games = service.findTwo(new GameDTO(story/4, challenge/4, collect/3, tech/3, casual/3, collabo/3));
         mv.addObject("gamelist", games);
 
         return mv;

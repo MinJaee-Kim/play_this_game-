@@ -20,14 +20,6 @@ public class JpaGameRepository implements GameRepository{
     }
 
     @Override
-    public List<Game> findOnea(GameDTO dto) {
-        System.out.println(dto.getCasual());
-        return entityManager.createQuery("select g from Game g where g.casual = : casual", Game.class)
-                .setParameter("casual", dto.getCasual())
-                .getResultList();
-    }
-
-    @Override
     public List<Game> findTwo(GameDTO dto) {
         System.out.println(dto.getCasual());
         return entityManager.createQuery("select g from Game g where g.casual = : casual", Game.class)
