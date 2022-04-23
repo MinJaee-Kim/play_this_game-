@@ -18,6 +18,10 @@ public class GamedeService {
         return repository.findAll();
     }
 
+    public List<Game> findOne(long id) {
+        return repository.findOne(id);
+    }
+
     public List<Game> findBetween(GameDTO dto) {return repository.findBetween(dto);}
 
     public List<Game> findBetweenWide(GameDTO dto) {return repository.findBetweenWide(dto);}

@@ -19,6 +19,13 @@ public class JpaGameRepository implements GameRepository{
                 .getResultList();
     }
 
+    @Override
+    public List<Game> findOne(long id) {
+        return entityManager.createQuery("select g from Game g where g.id = :id", Game.class)
+                .setParameter("id", id)
+                .getResultList();
+    }
+
     public List CountBetween(GameDTO dto) {
         return entityManager.createQuery("select g.id from Game g where g.casual between : casual and (: casual + 1) and g.challenge between :challenge and (: challenge +1)" +
                         "and g.collabo between :collabo and (: collabo +1) and g.collect between :collect and (: collect +1) and g.story between :story and (: story +1)" +
