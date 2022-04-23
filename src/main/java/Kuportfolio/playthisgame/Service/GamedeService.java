@@ -24,9 +24,9 @@ public class GamedeService {
 
     public List<Game> findBetweenWide2(GameDTO dto) {return repository.findBetweenWide2(dto);}
 
-    public Long CountBetween(GameDTO dto) {return repository.CountBetween(dto);}
+    public List CountBetween(GameDTO dto) {return repository.CountBetween(dto);}
 
-    public Long CountBetweenWide(GameDTO dto) {return repository.CountBetweenWide(dto);}
+    public List CountBetweenWide(GameDTO dto) {return repository.CountBetweenWide(dto);}
 
-    public Long CountBetweenWide2(GameDTO dto) {return repository.CountBetweenWide2(dto);}
+    public List CountBetweenWide2(GameDTO dto) {return repository.CountBetweenWide2(dto);}
 }

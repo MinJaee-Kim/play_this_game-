@@ -9,7 +9,7 @@ public interface GameRepository {
     List<Game> findBetween(GameDTO dto);
     List<Game> findBetweenWide(GameDTO dto);
     List<Game> findBetweenWide2(GameDTO dto);
-    long CountBetween(GameDTO dto);
-    long CountBetweenWide(GameDTO dto);
-    long CountBetweenWide2(GameDTO dto);
+    List CountBetween(GameDTO dto);
+    List CountBetweenWide(GameDTO dto);
+    List CountBetweenWide2(GameDTO dto);
 }
