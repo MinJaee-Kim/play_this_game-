@@ -36,13 +36,15 @@
                         <div class="gameimg">
                             <img class="gameimg2" th:src="@{./imgs/}+${game.uri}+.jpg"/>
                             <div class="exten">
-<!--                            <p class="exten2" th:text="${game.explanation}"/>-->
+                            <p class="exten2" th:text="${game.explanation}"/>
                             </div>
                         </div>
-                        <video control  class="videoSrc">
-<!--                            <source th:src="${game.videoUrl}"-->
-<!--                                    type="video/webm">-->
+                        <video controls class="videoSrc">
+                            <source th:src="${game.videoUrl}"
+                               type="video/webm">
                         </video>
+                    </div>
+                    </div>
 
                         <div class="resultbuttonout">
                           <div class="resultbutton">
@@ -50,9 +52,7 @@
                                 <a class="a" href="/input">다시하기</a>
                             </div>
                         </div>
-
                 </div>
-            </div>
         </main>
 
 
