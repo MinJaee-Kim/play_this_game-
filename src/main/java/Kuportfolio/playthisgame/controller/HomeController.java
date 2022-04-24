@@ -3,7 +3,9 @@ package Kuportfolio.playthisgame.controller;
 import Kuportfolio.playthisgame.Entity.Game;
 import Kuportfolio.playthisgame.Service.GamedeService;
 import Kuportfolio.playthisgame.dto.GameDTO;
+import Kuportfolio.playthisgame.dto.NameDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +22,7 @@ public class HomeController {
     @Autowired
     GamedeService service;
 
+
     @GetMapping("/")
     public String home() {
         return "home";
@@ -27,11 +30,13 @@ public class HomeController {
 
     @GetMapping("/input")
     public String input() {
+
         return "input";
     }
+    NameDTO nameDTO;
 
     @PostMapping("/check")
-    public String check(Model model) {
+    public String check(Model model, @RequestParam("myname") String name) {
         List<Question> questionList;
         List<Answer> answerList;
 
@@ -43,6 +48,7 @@ public class HomeController {
 
         model.addAttribute("question", questionList);
         model.addAttribute("answer", answerList);
+        nameDTO = new NameDTO(name);
 
         return "check";
     }
@@ -51,7 +57,9 @@ public class HomeController {
     @PostMapping("/result")
     public ModelAndView result(ModelAndView mv, @RequestParam HashMap<String, String> hashMap, Model model) {
         mv.setViewName("result");
+
         model.addAttribute("val", hashMap);
+        model.addAttribute("myname", nameDTO.getName());
 
         int story=0;
         int challenge=0;
@@ -117,7 +125,6 @@ public class HomeController {
 
         }
         System.out.println(count);
-
 
         mv.addObject("gamelist", games);
 
