@@ -5,8 +5,8 @@ export class GameGroup2{
         this.totalGames = 5;
         this.imgs = ['imgs/ApexLegend.jpg', 'imgs/civilizationVI.jpg', 'imgs/djmaxRespect.jpg', 
         'imgs/eldenring.jpg', 'imgs/gta5.jpg'];
-        this.imgs2 = ['imgs/ittaketwo.jpg', 'imgs/monsterhunterrise.jpg', 'imgs/rainbowsixsiege.jpg', 
-        'imgs/STARDEWVALLEY.jpg', 'imgs/UNDERTALE.jpg'];
+        this.imgs2 = ['imgs/LITTLENIGHTMARE.jpg', 'imgs/forza.jpg', 'imgs/Fallguys.jpg',
+        'imgs/csgo.jpg', 'imgs/biohazard.jpg'];
         this.games = [];
         this.games2 = [];
 

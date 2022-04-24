@@ -3,8 +3,8 @@ import { Game } from "./game.js";
 export class GameGroup{
     constructor(){
         this.totalGames = 5;
-        this.imgs = ['imgs/ApexLegend.jpg', 'imgs/civilizationVI.jpg', 'imgs/djmaxRespect.jpg', 
-        'imgs/eldenring.jpg', 'imgs/gta5.jpg'];
+        this.imgs = ['imgs/rimworld.jpg', 'imgs/raft.jpg', 'imgs/PUBG.jpg',
+        'imgs/nomansky.jpg', 'imgs/MGS.jpg'];
         this.imgs2 = ['imgs/ittaketwo.jpg', 'imgs/monsterhunterrise.jpg', 'imgs/rainbowsixsiege.jpg', 
         'imgs/STARDEWVALLEY.jpg', 'imgs/UNDERTALE.jpg'];
         this.games = [];
