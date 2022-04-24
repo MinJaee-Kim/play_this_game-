@@ -15,7 +15,7 @@
         <header id="header">
             <div id="container">
                 <div class="header_object">
-                    <h1>이 겜 해봤음?</h1>
+                    <h1>이 <span class="title_object">겜</span> 해봤음?</h1>
                 </div>
             </div>
         </header>
@@ -24,6 +24,7 @@
         <main id="main">
             <div>
                 <p class="chuchun" th:text="'저희가 '+ ${myname} +'님께 추천한 게임은?!'"> </p>
+
             </div>
 
             <div class="result" th:each = "game : ${gamelist}">
