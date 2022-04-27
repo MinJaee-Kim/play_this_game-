@@ -1,3 +1,5 @@
+Kakao.init('3ea186cb8a32aa139da1f636aa84ff99');
+
 function scrollT() {
     window.scrollBy(0, 312);
 }
@@ -34,4 +36,42 @@ function checkSubmit() {
 
     form.action = "/result";
     form.submit();
+}
+
+function kakaotalkshare(){
+
+
+    Kakao.Link.sendDefault({
+        objectType: 'feed',
+        content: {
+            title: '이 겜 해봤어?',
+            description: '요즘 할 게임이 없다고? 게임 찾아줄께! 너도 와서 한번 해봐!',
+            imageUrl: 'https://ifh.cc/g/gM1N5a.jpg',
+            link: {
+                mobileWebUrl: '카카오공유하기 시 클릭 후 이동 경로',
+                webUrl: '카카오공유하기 시 클릭 후 이동 경로',
+            },
+        },
+        buttons: [
+            {
+                title: '나도 한번 해보기',
+                link: {
+                    mobileWebUrl: '카카오공유하기 시 클릭 후 이동 경로',
+                    webUrl: '카카오공유하기 시 클릭 후 이동 경로',
+                },
+            },
+        ],
+        // 카카오톡 미설치 시 카카오톡 설치 경로이동
+        installTalk: true,
+    })
+}
+function shareFacebook() {
+    var sendUrl = "http://3.92.225.108:8080/"; // 전달할 URL
+    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+}
+
+function shareTwitter() {
+    var sendText = "이 겜 해봣어?"; // 전달할 텍스트
+    var sendUrl = "http://3.92.225.108:8080/"; // 전달할 URL
+    window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
