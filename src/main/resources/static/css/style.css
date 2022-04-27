@@ -15,7 +15,9 @@ canvas { width: 100%; height: 100%; position: fixed; top: 0; z-index: -4; }
 
 /*미디어*/
 @media (max-width: 576px) {
-    
+    .container2 .main2{
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 768px) {
