@@ -66,12 +66,6 @@ function kakaotalkshare(){
     })
 }
 function shareFacebook() {
-    var sendUrl = "http://3.92.225.108:8080/"; // 전달할 URL
+    var sendUrl = "http://www.played-this-game.shop/"; // 전달할 URL
     window.open("http://www.facebook.com/sharer.php?u="+ sendUrl);
-}
-
-function shareTwitter() {
-    var sendText = "이 겜 해봣어?"; // 전달할 텍스트
-    var sendUrl = "http://3.92.225.108:8080/"; // 전달할 URL
-    window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
