@@ -130,13 +130,5 @@ public class HomeController {
 
         return mv;
     }
-
-    @RequestMapping("/gamelist")
-    public ModelAndView list(ModelAndView mv) {
-        mv.setViewName("list");
-//        mv.addObject("gamelist", service.getRecGame(new GameDTO(7, 7, 0, 4, 7, 0)));
-
-        return mv;
-    }
  }
 
