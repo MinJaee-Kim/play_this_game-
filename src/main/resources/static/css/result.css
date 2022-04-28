@@ -91,6 +91,16 @@
 .sharefont{
     text-align: center;
     font-family: DOSGothic;
-    color:rgba(238, 118, 118 );
+    color:rgba(20,20,20,0.5);
     font-size: 18px;
+    font-weight: bold;
+}
+.sharebackground{
+    border: 2px solid rgba(20,20,20,0.4);
+    border-radius: 1rem;
+    width: 10rem;
+    margin-right: auto;
+    margin-left: auto;
+    background: rgba(255,255,255,0.3);
+
 }
