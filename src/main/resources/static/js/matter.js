@@ -67,7 +67,8 @@ function kakaotalkshare(){
 }
 function shareFacebook() {
     var sendUrl = "http://3.92.225.108:8080/"; // 전달할 URL
-    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+    var image = "https://ifh.cc/g/gM1N5a.jpg";
+    window.open("http://www.facebook.com/sharer.php?u="+ sendUrl + "&t=" + sendtitle);
 }
 
 function shareTwitter() {
