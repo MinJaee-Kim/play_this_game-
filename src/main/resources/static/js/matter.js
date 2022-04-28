@@ -46,7 +46,7 @@ function kakaotalkshare(){
         content: {
             title: '이 겜 해봤어?',
             description: '요즘 할 게임이 없다고? 게임 찾아줄께! 너도 와서 한번 해봐!',
-            imageUrl: 'https://ifh.cc/g/gM1N5a.jpg',
+            imageUrl: 'https://ifh.cc/g/J5w5nD.png',
             link: {
                 mobileWebUrl: '카카오공유하기 시 클릭 후 이동 경로',
                 webUrl: '카카오공유하기 시 클릭 후 이동 경로',
